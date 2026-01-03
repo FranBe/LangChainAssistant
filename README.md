@@ -15,7 +15,7 @@ Small project to running a free version of a LangChain model and having our own 
 
 ### Project configuration
 
-After creating the project directory, it is recommendable to working with a virtual environment. For simplicity, in this case I used *virtualenv*, but any other could be used instead.  
+After creating the project directory, it is recommendable to work with a virtual environment. For simplicity, in this case I used *virtualenv*, but any other could be used instead.  
 This time I pick Gemini as the agent provider, since it offers LLM free models to use.  
 As usually, when using an external service, it is necessary to obtain the corresponding API key:  
   
@@ -26,7 +26,6 @@ Once logged in with your Google user, and after accepting the licence Terms, we 
 ![API_key](/resources/imgs/API_key.png)
 
 With that, we are in position to connect to the Google model trough LangChain.
-
 
 ### The LangChain model
 
@@ -74,6 +73,10 @@ Something interesting, is that you can check the [usage and billing of the model
 
 
 ### The code
+
+In first place, you have to take into account that you should never share your presonal token or API key. For that reason, the *.env* file wich contains it, must be added by you to your own project. Inside, it must contains the given API key name, with the corresponding string. For example:
+
+        GEM_API_KEY={the_api_key}
 
 
 The documentation related with this tool provided by Google can be found in [this link](https://docs.langchain.com/oss/python/integrations/chat/google_generative_ai).
